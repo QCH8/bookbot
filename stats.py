@@ -13,9 +13,3 @@ def count_characters(file_contents):
             dict_count_characters [letter] = 1
     return dict_count_characters
 
-"""
-def count characters
-doit utiliser .lower() pour éviter les duplicats
-utilisation d'un dictionnaire str & int type "a" : 72 etc
-doit compter par lettres le nombre de caractères présent dans file_contents
-"""
