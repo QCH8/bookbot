@@ -13,3 +13,12 @@ def count_characters(file_contents):
             dict_count_characters [letter] = 1
     return dict_count_characters
 
+def cleaning_dictionary(dict):
+    result_list = []
+    
+    for key, value in dict.items():
+        kv_dict = {"char" : key, "num" : value}
+        result_list.append(kv_dict)
+    
+    result_list.sort(key=lambda item: item['num'], reverse=True)
+    return result_list
