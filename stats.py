@@ -22,3 +22,8 @@ def cleaning_dictionary(dict):
     
     result_list.sort(key=lambda item: item['num'], reverse=True)
     return result_list
+
+def time_estimate(word_per_minute,file_contents):
+    content_time_estimate = word_count(file_contents) / word_per_minute
+    content_time_estimate_hour = round(content_time_estimate / 60, 1)
+    return content_time_estimate_hour

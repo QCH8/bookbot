@@ -7,6 +7,7 @@ def get_book_text(filepath):
     return file_contents
 
 def main():
+    
     if len(sys.argv) < 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
@@ -20,10 +21,14 @@ def main():
     print(f"Analyzing book found at {file_path}...")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
+    print("----- Estimated time to read ----")
+    print(f"The average reader takes {time_estimate(238, file_contents)} hours to complete this book")
     print("--------- Character Count -------")
     for item in char_list:
         if item['char'].isalpha():
             print(f"{item['char']}: {item['num']}")
     print("============= END ===============")
+    
+    
 
 main()
